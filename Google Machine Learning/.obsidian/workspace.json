@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML Models/Linear Regression/Loss.md",
+                "file": "ML Models/Linear Regression/Bias.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Loss"
+              "title": "Bias"
             }
           }
         ]
@@ -40,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical",
+                "sortOrder": "byCreatedTimeReverse",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "9c3e7e830985403e",
@@ -166,8 +165,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7169605e483bfdb4",
+  "active": "3ad5a352d6dc164c",
   "lastOpenFiles": [
+    "ML Models/Linear Regression/Weight.md",
+    "ML Models/Linear Regression/Linear Regression.md",
+    "ML Models/Linear Regression/Loss.md",
+    "ML Models/Linear Regression/Mean Absolute Error (MAE).md",
+    "ML Models/Linear Regression/L1 Loss.md",
+    "ML Models/Linear Regression/Bias.md",
+    "ML Models/Linear Regression/Parameter.md",
+    "ML Models/Linear Regression/Feature.md",
+    "ML Models/Linear Regression/Label.md",
+    "img",
+    "img/Pasted image 20250307230801.png",
+    "img/Pasted image 20250307230744.png",
+    "img/Pasted image 20250307230025.png",
+    "img/Pasted image 20250307225801.png",
     "2025-03-07.md",
     "Untitled 1.canvas",
     "Untitled.canvas"

@@ -1,12 +1,16 @@
-# What is loss?
+# What Is loss?
 
 - [i] **Loss** is a numerical metric that <u>describes how wrong a model's predictions are</u>.
 Loss **measures** <u>the distance between the model's predictions and the actual labels</u>.
 The **goal** of training a model is to <u>minimize the loss, reduction to its lowest possible value</u>.
 
 <figure>
-<img src = "https://developers.google.com/static/machine-learning/crash-course/linear-regression/images/loss-lines.png">
-<figcaption>Figure 1. Loss is measured from the actual value to the predicted value</figcaption>
+	<center>
+		<img src = "https://developers.google.com/static/machine-learning/crash-course/linear-regression/images/loss-lines.png">
+		<figcaption> 
+			<b>Figure 1.</b> Loss is measured from the actual value to the predicted value
+		</figcaption>
+	</center>
 </figure>
 
 ---
@@ -24,12 +28,12 @@ The two most common methods to remove the sign are:
 
 In linear regression, there are four main types of loss:
 
-| Loss Type                     | Definition                                                                                           | Equation                                                               |
-| ----------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| **$L_1$ loss**                | The sum of the absolute values of the difference between the predicted values and the actual values. | $\Sigma{\vert{\text{actual value - predicted value}\vert}}$            |
-| **Mean absolute error (MAE)** | The average of $L_1$ losses across a set of examples.                                                | $\frac{1}{N} \Sigma{\vert \text{actual value - predicted value}\vert}$ |
-| **$L_2$ loss**                | The sum of the square difference between the predicted values and the actual values.                 | $\Sigma{\text{(actual value - predicted value)}^2}$                    |
-| **Mean square error (MSE)**   | The average of $L_2$ losses across a set of examples.                                                | $\frac{1}{N} \Sigma{\text{(actual value - predicted value)}^2}$        |
+| Loss Type                                                    | Definition                                                                                           | Equation                                                               |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **$L_1$ loss**                                               | The sum of the absolute values of the difference between the predicted values and the actual values. | $\Sigma{\vert{\text{actual value - predicted value}\vert}}$            |
+| **[[Mean Absolute Error (MAE)\|Mean absolute error (MAE)]]** | The average of $L_1$ losses across a set of examples.                                                | $\frac{1}{N} \Sigma{\vert \text{actual value - predicted value}\vert}$ |
+| **$L_2$ loss**                                               | The sum of the square difference between the predicted values and the actual values.                 | $\Sigma{\text{(actual value - predicted value)}^2}$                    |
+| **Mean square error (MSE)**                                  | The average of $L_2$ losses across a set of examples.                                                | $\frac{1}{N} \Sigma{\text{(actual value - predicted value)}^2}$        |
 
 > [!note] Note
 > The functional difference between $L_1$ loss and $L_2$ loss (or between MAE and MSE) is squaring.
@@ -53,3 +57,40 @@ In linear regression, there are four main types of loss:
 
 - [k] Deciding whether to use MAE or MSE can depend on the dataset and the way you want to handle certain predictions.
 Most features in a dataset typically fall within a distinct range.
+- [i] An outlier can also refer to <u>how far off a model's predictions are from the real values</u>.
+- [I] When choosing the best loss function, <u>consider how you want the model to treat outliers</u>.
+	- For instance: MSE moves the model more toward the outliers, while MAE doesn't.
+	- $L_2$ loss incurs a much higher penalty for an outlier than $L_1$ loss.
+		- For example:
+	<figure>
+		<center>
+			<img src = "Pasted image 20250307225801.png">
+			<figcaption>
+			<b>Figure 10</b>. A model trained with MSE moves the model closer to the outliers.
+			</figcaption>
+		</center>
+	</figure>		
+	
+	<figure>
+		<center>
+			<img src = "		Pasted image 20250307230025.png">
+			<figcaption>
+			<b>Figure 11</b>. A model trained with MAE is farther from the outliers.
+			</figcaption>
+		</center>
+	</figure>
+	The image show a model trained using MAR and a model trained using MSE. The red line represents a fully trained model that will be used to make predictions.
+	Note the relationship between the model and data:
+	- **MSE**: The model is closer to the outliers but further away form most of the other data points.
+	- **MAE**: The model is further away from the outliers but closer to most of the other data points.
+
+> [!question] Check your understanding
+> Consider the following two plots:
+> <figure><center><img src = "Pasted image 20250307230744.png"><figcaption><b>Dataset 1</b></figcaption></center></figure>
+> 
+> 
+> <figure><center><img src = "Pasted image 20250307230801.png"><figcaption><b>Dataset 2</b></figcaption></center></figure>
+> 
+> Which of the two data sets has the higher Mean Square Error (MSE)?
+> >- [ ] Dataset 1
+> > - [x] Dataset 2

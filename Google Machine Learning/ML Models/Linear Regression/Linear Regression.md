@@ -1,12 +1,16 @@
+#Model
+
 - [k] Learning Objective:
 	- [*] Explain what a loss function and how it works.
 	- [*] Define and describe how gradient descent finds the optimal model parameters.
 	- [*] Describe how to tune hyper parameters to efficiently train a linear model.
 # What is Linear Regression?
-- [i] Linear regression is a statistical technique used to find the relationship between variables. In an ML context, linear regression finds the relationship between features and a label.
+
+- [i] Linear regression is a statistical technique used to find the relationship between variables. In an ML context, linear regression finds the relationship between [[Feature|features]] and a [[Label|label]].
 
 ---
 # Linear Regression Equation
+
 In algebraic terms, the model would be defined as $y=mx+b$, where:
 - $y$ is the value we want to predict.
 - $m$ is the slope of the line.
@@ -18,11 +22,11 @@ y'=b+w_1x_1
 $$
 where:
 - $y'$ is the predicted label - the output.
-- $b$ is the bias of the model.
-	- [i] Bias is the same concept as the y-intercept in the algebraic equation for a line. In ML, bias is sometimes referred to as $w_0$. Bias is a parameter of the model and is calculated during training.
-- $w_1$ is the weight of the feature.
-	- [i] Weight is the same concepts as the slope m in the algebraic equation for a line. Weight is a parameter of the model and is calculated during training.
-- $x_1$ is a feature - the input.
+- $b$ is the [[Bias|bias]] of the model.
+	- [i] Bias is the same concept as the y-intercept in the algebraic equation for a line. In ML, bias is sometimes referred to as $w_0$. Bias is a [[Parameter|parameter]] of the model and is calculated during training.
+- $w_1$ is the [[Weight|weight]] of the feature.
+	- [i] Weight is the same concepts as the slope m in the algebraic equation for a line. Weight is a [[Parameter|parameter]] of the model and is calculated during training.
+- $x_1$ is a [[Feature|feature]] - the input.
 *During training, the model calculates the weight and bias that produce the best model.*
 <figure>
 	<img src = "https://developers.google.com/static/machine-learning/crash-course/linear-regression/images/equation.png">
@@ -31,6 +35,7 @@ where:
 
 ---
 # Models With Multiple Features
+
 For example, a model that relies on five features would be written as follows:
 $$
 y'=b+w_1x_1+w_2x_2+w_3x_3+w_4x_4+w_5x_5
